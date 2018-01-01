@@ -106,6 +106,12 @@ const arrInput = [
     posts: [
       '1631959910215097'
     ]
+  },
+  {
+    ownerID: '400202166812077', //Doc bao thay ban
+    posts: [
+      '980373452128276'
+    ]
   }
 ];
 

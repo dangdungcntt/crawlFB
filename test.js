@@ -1,15 +1,14 @@
+const resemble = require('resemblejs')
 const fs = require('fs');
-const fse = require('fs-extra');
-const path = require('path');
-const walkDir = require('./walkDir');
 
-const check = (f) => {
-  if (Array.isArray(f)) {
-    f.forEach(ff => check(ff));
-  } else {
-    const type = f.name.split('_')[0];
-    fse.copySync(f.path, path.resolve(`${__dirname}/filtered/${type}/${f.name}`));
-  }
-}
-
-check(walkDir.walkDirSync(__dirname + '/downloaded'))
+resemble(fs.readFileSync('1.png')).compareTo(fs.readFileSync('2.png')).ignoreColors().onComplete(function (data) {
+  console.log(data);
+	/*
+	{
+	  misMatchPercentage : 100, // %
+	  isSameDimensions: true, // or false
+	  dimensionDifference: { width: 0, height: -1 }, // defined if dimensions are not the same
+	  getImageDataUrl: function(){}
+	}
+	*/
+});
