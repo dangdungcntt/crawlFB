@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 const fs = require('fs')
 const _ = require('lodash');
 
-const FB = require('./FB');
+const FB = require('./libs/FB');
 
 const getCommentsDataInPost = async ({ ownerID, objID }) => {
   const arrIMG = [];

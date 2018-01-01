@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "canvas": "^1.6.9",
+    "canvas-prebuilt": "^1.6.5-prerelease.1",
     "dotenv": "^4.0.0",
     "fs-extra": "^5.0.0",
     "image-downloader": "^3.3.0",

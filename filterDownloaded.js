@@ -1,7 +1,7 @@
 const fs = require('fs');
 const fse = require('fs-extra');
 const path = require('path');
-const walkDir = require('./walkDir');
+const walkDir = require('./libs/walkDir');
 
 const check = (f) => {
   if (Array.isArray(f)) {
